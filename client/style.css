@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    background-color: #f0f0f0;
+    overflow: hidden; /* prevents scrolling the whole page */
+  }
+  /* Message container takes all space above the form */
+  #message-container {
+    position: absolute;
+    top: 0;
+    bottom: 180px; /* adjust based on actual form height */
+    left: 10px;
+    right: 10px;
+    overflow-y: auto; /*automatic scroll bar*/
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 5px;
+    /* border-color: black; */
+    border: 2px solid black;
+
+  }
+
+  .display-message{
+    border: 0px solid black;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+  }
+  
+  /* Form is always visible at the bottom */
+  #form {
+    position: fixed;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    /* width: 100%;  */
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 10px;
+    /* align-items: center; */
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  .bottom-box{
+    width: 100%;
+    display: flex;
+    /* align-items: center;*/
+    gap: 10px; 
+    align-items: stretch
+  }
+
+  /* Input fields */
+  #message-input,
+  #room-input {
+    /* flex: 1; */
+    font-size:30px;
+
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    flex-grow: 2;
+    min-height: 50px; /* ensure visibility even if content is small */
+
+  }
+  
+  /* Buttons */
+  #send-button,
+  #room-button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    font-size:30px;
+
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-grow: 0.2;
+    min-height: 50px; /* ensure visibility even if content is small */
+  }
+  
+  
+  label {
+    font-weight: bold;
+    font-size:30px;
+  text-align: center;
+  display: flex;
+  align-items: center; /* vertically centers text inside the label */
+  height: 40px; /* match input height if needed */
+  min-height: 50px; /* ensure visibility even if content is small */
+
+  }
+
+  #send-button:hover,
+  #room-button:hover {
+    background-color: #0056b3;
+  }
