@@ -12,6 +12,18 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log("Socket connected:", socket.id);
+
+  socket.on("send-message",(message,room) =>{
+    if(room === ""){
+        socket.broadcast.emit("receive-message",message,room)  
+    }else{
+        socket.to(room).emit("receive-message",message,room)  
+    }
+})
+socket.on("join-custom-room",(room,cb)=>{
+    socket.join(room)
+    cb(`Joined Custom Room ${room}`)
+})
 });
 
 server.listen(3000, () => {
