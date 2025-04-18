@@ -1,5 +1,4 @@
-import { io } from "socket.io-client";
-
+import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
 const form = document.getElementById("form");
 const messageInput = document.getElementById("message-input");
 const roomInput = document.getElementById("room-input");
